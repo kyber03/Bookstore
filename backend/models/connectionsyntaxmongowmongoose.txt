@@ -1,0 +1,19 @@
+
+CRUD 
+Create = post
+READ or find = GET
+UPDATE = PUT
+DELETE = delete
+
+
+mongoose
+  .connect(mongodbUrl)
+  .then(() => {
+    console.log("database connected successfully");
+    app.listen(PORT, () => {
+      console.log(`the app is at ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
